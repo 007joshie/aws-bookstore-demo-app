@@ -1,3 +1,4 @@
+//Name: Josh Boag, ID: 1500375
 export const categories = {
   cooks: "Cookbooks",
   database: "Database",
