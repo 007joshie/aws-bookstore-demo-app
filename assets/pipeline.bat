@@ -7,6 +7,14 @@ if errorlevel 1 (
     exit /b
 )
 
+call npm test src/__tests__ -- --ci --watchAll=false
+if errorlevel 1 (
+    echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    echo TEST FAILED: EXITING...
+    echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    exit /b
+)
+
 call npm install
 call npm run build
 
